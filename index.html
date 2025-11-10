@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy Rifa RD - Ruleta Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enjoy Rifa RD 🎉</h1>
+        <p id="fecha"></p>
+        <p>Intentos: <span id="contador">0</span></p>
+
+        <div class="input-section">
+            <input type="text" id="nombre" placeholder="Nombre del participante">
+            <input type="text" id="numero" placeholder="Número del participante (4 dígitos)">
+            <button id="agregar">Agregar participante</button>
+        </div>
+
+        <div class="buttons">
+            <button id="iniciar">🎲 Iniciar Rifa</button>
+            <button id="resetear">♻️ Resetear</button>
+            <button id="mostrarGanador">🏆 Mostrar Ganador</button>
+            <button id="descargar">💾 Descargar Resultados</button>
+        </div>
+
+        <div class="ruleta-container">
+            <canvas id="ruleta" width="400" height="400"></canvas>
+            <div id="flecha"></div>
+        </div>
+
+        <h2>Número Sorteado:</h2>
+        <p id="numeroSorteado" class="numero-sorteo">----</p>
+
+        <h2>Participantes:</h2>
+        <table id="tablaParticipantes">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Número</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <h2>Historial de Ganadores:</h2>
+        <table id="tablaHistorial">
+            <thead>
+                <tr>
+                    <th>Fecha</th>
+                    <th>Nombre</th>
+                    <th>Número</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
